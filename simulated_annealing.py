@@ -98,6 +98,8 @@ def build_distance_matrix(num_cities, distances, city_format):
 input_file = "AISearchfile012.txt"
 if len(sys.argv) > 1:
     input_file = sys.argv[1]
+if len(sys.argv) > 2:
+    max_time = int(sys.argv[2])
 
 path_for_city_files = "city-files"
 path_to_input_file = os.path.join(path_for_city_files, input_file)
@@ -172,6 +174,8 @@ temp = 10 * edge_range / (-math.log(0.5))
 decay_constant = 0.99999
 
 while temp > min_temp:
+    if time.time() - start_time > max_time:
+        break
     # Select 2 random indexes for the current tour (which are not the same)
     i = random.randint(0, num_cities-1)
     j = (i + random.randint(1, num_cities-1)) % num_cities
