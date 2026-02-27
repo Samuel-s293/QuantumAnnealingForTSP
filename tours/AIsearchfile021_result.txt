@@ -1,0 +1,4 @@
+Input File: AIsearchfile021.txt
+Time Taken: 9.9549 seconds
+Tour Length: 2741
+Tour Path: [15, 5, 17, 0, 16, 12, 11, 2, 6, 19, 14, 3, 20, 9, 18, 4, 13, 10, 8, 1, 7]
